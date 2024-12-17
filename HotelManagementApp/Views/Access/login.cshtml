@@ -1,0 +1,41 @@
+﻿@model HotelManagementApp.Models.VMLogin
+
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post" asp-action="login" asp-controller="Access">
+          <div asp-validation-summary="All" style="color:aqua"></div>
+        <div class="txt_field">
+          <input asp-for="Email">
+          <span></span>
+          @*<label>Username</label>*@
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+
+            @*<input asp-for="Email" type="email" placeholder="Email">
+            <span asp-validation-for="Email" style="color: red" ></span>*@
+
+            @*<input asp-for="Password" type="password" placeholder="Password">
+            <span asp-validation-for="Password" style="color: red"></span>*@
+
+            @* <input asp-for="Password" type="password" placeholder="Password"> *@
+            <input asp-for="Password" type="password">
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+        @if (ViewData["ValidateMessage"] != null)
+        {
+            <label>@ViewData["ValidateMessage"]</label>
+        }
+        <div class="signup_link">
+          Not a member? <a asp-action="index" asp-controller="Access">Signup</a>
+        </div>
+        
+    </form>
+    </div>

@@ -1,0 +1,61 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.myImg img {
+    height: 400px;
+    width: 100%;
+    margin-left: 5px;
+}
+
+img {
+    width: 300px;
+    height: 220px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.1s;
+    margin-top: 20px;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+h2 {
+    color: red;
+    text-align: center;
+}
+
+h3 {
+    color: purple;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #0000ff;
+}

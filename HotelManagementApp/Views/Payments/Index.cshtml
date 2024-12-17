@@ -1,0 +1,47 @@
+﻿@model IEnumerable<HotelManagementApp.PaymentFolder.Payment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Payment</h1>
+
+<p>
+    <a asp-action="Create">Make New Payment</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GuestName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentMeth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GuestName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentMeth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
